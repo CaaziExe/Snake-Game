@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Snake Game</title>
+        <link href="style/setting-style.css" rel="stylesheet" />
+    </head>
+
+    <body>
+        <label id="l-title">Gameplay</label>
+        <div id="f-setting">
+            <div id="f-borderless">
+                <label id="l-borderless">Borderless</label>
+            </div>
+            <div id="f-mode" class="f-spinner">
+                <label id="l-mode" class="l-spinner">Mode</label>
+                <span id="b-prev-mode" class="b-prev-spinner"></span>
+                <div id="user-mode" class="obj-spinner">
+                </div>
+                <span id="b-next-mode" class="b-next-spinner"></span>
+            </div>
+            <div id="f-speed" class="f-spinner">
+                <label id="l-speed" class="l-spinner">Speed</label>
+                <span id="b-prev-speed" class="b-prev-spinner"></span>
+                <div id="user-speed" class="obj-spinner">
+                </div>
+                <span id="b-next-speed" class="b-next-spinner"></span>
+            </div>
+            <button id="b-back" onclick="window.location.href='index.html'">Back</button>
+        </div>
+        <script src="setting.js"></script>
+    </body>
+</html>

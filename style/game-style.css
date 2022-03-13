@@ -1,0 +1,51 @@
+body{
+    font-family: monospace;
+
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+
+#score{
+    font-size: 4em;
+    color: #7c3076;
+    width: fit-content;
+}
+
+#canv{
+    background-color: #000435;
+    border: 10px solid #7c3076;
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+button{
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+#b-back{
+    font-family: monospace;
+    font-size: 2em;
+    width: 5em;
+    height: 2em;
+    border: 4px solid #7c3076;
+    background-color: #000435;
+    color: white;
+    display: block;
+    position: absolute;
+    right: 8%;
+}
+
+#b-back:hover{
+    background-color: orange;
+}
+
+#b-back:active{
+    background-color: #9e6700;
+}
