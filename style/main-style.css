@@ -62,7 +62,7 @@ button{
 
 #game-version{
     font-size: 1.2em;
-    position: absolute;
+    position: fixed;
     right: 0;
     bottom: 0;
     margin: 10px;
