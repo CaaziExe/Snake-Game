@@ -121,7 +121,6 @@ async function snakeMove(){
             l_score.innerText = `Score: ${score}`;
             
             snakeLength++;
-            //console.log(trail[0], trail[1]);
             if(localStorage.getItem("mode") == "Reverse"){
                 if(trail[1].x - trail[0].x == 1){
                     xVel = -1;
@@ -140,7 +139,6 @@ async function snakeMove(){
                     yVel = 1;
                     snakeDir = "d";
                 }
-                //console.log(snakeDir);
                 posX = trail[0].x;
                 posY = trail[0].y;
                 trail.reverse();
@@ -171,20 +169,20 @@ async function snakeMove(){
 
 document.onkeydown = event => {
     key = event.keyCode;
-    if(!gameStart && (key == 37 || key == 38 || key == 39 || key == 40)){
-        if(key == 37 && snakeDir != "r"){//left
+    if(!gameStart && (key == 65 || key == 87 || key == 68 || key == 83 || key == 37 || key == 38 || key == 39 || key == 40)){
+        if((key == 65 || key == 37) && snakeDir != "r"){//left
             xVel = -1;
             yVel = 0;
             snakeDir = "l";
-        }else if(key == 38 && snakeDir != "d"){//up
+        }else if((key == 87 || key == 38) && snakeDir != "d"){//up
             xVel = 0;
             yVel = -1;
             snakeDir = "u";
-        }else if(key == 39 && snakeDir != "l"){//right
+        }else if((key == 68 || key == 39) && snakeDir != "l"){//right
             xVel = 1;
             yVel = 0;
             snakeDir = "r";
-        }else if(key == 40 && snakeDir != "u"){//down
+        }else if((key == 83 || key == 40) && snakeDir != "u"){//down
             xVel = 0;
             yVel = 1;
             snakeDir = "d";
@@ -193,19 +191,19 @@ document.onkeydown = event => {
         gameStart = true;
     }
 
-    if(key == 37 && snakeDir != "r"){//left
+    if((key == 65 || key == 37) && snakeDir != "r"){//left
         xVel = -1;
         yVel = 0;
         snakeDir = "l";
-    }else if(key == 38 && snakeDir != "d"){//up
+    }else if((key == 87 || key == 38) && snakeDir != "d"){//up
         xVel = 0;
         yVel = -1;
         snakeDir = "u";
-    }else if(key == 39 && snakeDir != "l"){//right
+    }else if((key == 68 || key == 39) && snakeDir != "l"){//right
         xVel = 1;
         yVel = 0;
         snakeDir = "r";
-    }else if(key == 40 && snakeDir != "u"){//down
+    }else if((key == 83 || key == 40) && snakeDir != "u"){//down
         xVel = 0;
         yVel = 1;
         snakeDir = "d";
